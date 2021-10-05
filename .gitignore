@@ -1,0 +1,6 @@
+.idea/
+venv/
+*.pyc
+__pycache__/
+
+fattura_elettronica_generator/package_data/test_data/*.xml
