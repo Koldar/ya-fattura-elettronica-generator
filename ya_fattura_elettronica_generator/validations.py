@@ -5,8 +5,8 @@ from typing import List, TypeVar, Generic
 import arrow
 from koldar_utils.functions import math_helpers
 
-from fattura_elettronica_generator import models, utils
-from fattura_elettronica_generator.IFatturaElettronicaValidator import IFatturaElettronicaValidator, ValidationOutcome
+from ya_fattura_elettronica_generator import models, utils
+from ya_fattura_elettronica_generator.IFatturaElettronicaValidator import IFatturaElettronicaValidator, ValidationOutcome
 
 DATE_PARSER = "YYYY-MM-DD"
 ITALY_TIMEZONE = "Europe/Rome"

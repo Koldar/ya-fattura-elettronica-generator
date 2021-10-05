@@ -2,5 +2,8 @@
 venv/
 *.pyc
 __pycache__/
+build/
+dist/
+ya_fattura_elettronica_generator.egg-info/
 
 fattura_elettronica_generator/package_data/test_data/*.xml

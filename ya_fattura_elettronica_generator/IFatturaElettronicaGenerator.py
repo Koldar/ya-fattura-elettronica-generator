@@ -1,7 +1,7 @@
 import abc
 from typing import List
 
-from fattura_elettronica_generator.models import FatturaElettronicaType
+from ya_fattura_elettronica_generator.models import FatturaElettronicaType
 
 
 class IFatturaElettronicaGenerator(abc.ABC):

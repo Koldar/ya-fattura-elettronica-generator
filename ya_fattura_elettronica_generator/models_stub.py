@@ -9,10 +9,10 @@
 #   ('-s', 'models_stub.py')
 #
 # Command line arguments:
-#   fattura_elettronica_generator\package_data\Schema_del_file_xml_FatturaPA_versione_1.2.xsd
+#   ya_fattura_elettronica_generator\package_data\Schema_del_file_xml_FatturaPA_versione_1.2.xsd
 #
 # Command line:
-#   .\venv\Scripts\generateDS.py -o "models.py" -s "models_stub.py" fattura_elettronica_generator\package_data\Schema_del_file_xml_FatturaPA_versione_1.2.xsd
+#   .\venv\Scripts\generateDS.py -o "models.py" -s "models_stub.py" ya_fattura_elettronica_generator\package_data\Schema_del_file_xml_FatturaPA_versione_1.2.xsd
 #
 # Current working directory (os.getcwd()):
 #   pythonProject
@@ -23,7 +23,7 @@ import sys
 from lxml import etree as etree_
 
 
-from fattura_elettronica_generator import models
+from ya_fattura_elettronica_generator import models
 
 def parsexml_(infile, parser=None, **kwargs):
     if parser is None:

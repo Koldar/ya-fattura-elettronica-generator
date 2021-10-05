@@ -3,10 +3,10 @@ import logging
 import sys
 from typing import List
 
-from fattura_elettronica_generator import version, models
-from fattura_elettronica_generator.IFatturaElettronicaValidator import ValidationOutcome
-from fattura_elettronica_generator.models import FatturaElettronicaType
-from fattura_elettronica_generator.validations import RegimeForfettarioMonthlyInvoiceValidator
+from ya_fattura_elettronica_generator import version, models
+from ya_fattura_elettronica_generator.IFatturaElettronicaValidator import ValidationOutcome
+from ya_fattura_elettronica_generator.models import FatturaElettronicaType
+from ya_fattura_elettronica_generator.validations import RegimeForfettarioMonthlyInvoiceValidator
 
 
 

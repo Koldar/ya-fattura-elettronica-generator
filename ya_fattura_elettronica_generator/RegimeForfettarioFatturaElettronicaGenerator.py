@@ -1,6 +1,6 @@
-from fattura_elettronica_generator import models
-from fattura_elettronica_generator.IFatturaElettronicaGenerator import IFatturaElettronicaGenerator
-from fattura_elettronica_generator.models import FatturaElettronicaType, FatturaElettronicaHeaderType
+from ya_fattura_elettronica_generator import models
+from ya_fattura_elettronica_generator.IFatturaElettronicaGenerator import IFatturaElettronicaGenerator
+from ya_fattura_elettronica_generator.models import FatturaElettronicaType, FatturaElettronicaHeaderType
 
 
 

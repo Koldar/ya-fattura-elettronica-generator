@@ -1,7 +1,7 @@
 import abc
 from typing import List
 
-from fattura_elettronica_generator import models
+from ya_fattura_elettronica_generator import models
 
 
 class ValidationOutcome(object):
