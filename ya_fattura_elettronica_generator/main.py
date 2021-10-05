@@ -37,7 +37,7 @@ def parse_options(args):
     return parser, result
 
 
-def main(args):
+def _main(args):
     parser, options = parse_options(args)
 
     logging.basicConfig(level="INFO")
@@ -48,9 +48,9 @@ def main(args):
         options.func(options)
 
 
-def _main():
-    main(sys.argv[1:])
+def main():
+    _main(sys.argv[1:])
 
 
 if __name__ == "__main__":
-    _main()
+    main()
