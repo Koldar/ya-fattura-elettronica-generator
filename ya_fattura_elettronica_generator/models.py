@@ -1082,7 +1082,7 @@ class ModalitaPagamentoType(str, Enum):
 class NaturaType(str, Enum):
     N_1='N1' # Escluse ex. art. 15
     N_2='N2' # Non soggette
-    N_2_2 = 'N2'  # Non soggette (altri casi)
+    N_2_2 = 'N2.2'  # Non soggette (altri casi)
     N_3='N3' # Non Imponibili
     N_4='N4' # Esenti
     N_5='N5' # Regime del margine

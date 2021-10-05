@@ -226,6 +226,20 @@ class LineHasPrezzoUnitarioSetTo(AbstractValueEqualToValidator):
         return fattura_elettronica.get_FatturaElettronicaBody()[self.body_id].DatiBeniServizi.DettaglioLinee[self.numero_linea].PrezzoUnitario
 
 
+class LineHasQuantitaSetTo(AbstractValueEqualToValidator):
+
+    def __init__(self, body_id: int, numero_linea: int, expected_quantita: float):
+        super().__init__(expected_value=expected_quantita)
+        self.body_id = body_id
+        self.numero_linea = numero_linea
+
+    def get_field_description(self) -> str:
+        return f"body #{self.body_id} line #{self.numero_linea} (0-x) with quantita"
+
+    def get_value(self, fattura_elettronica: models.FatturaElettronicaType, context) -> any:
+        return fattura_elettronica.get_FatturaElettronicaBody()[self.body_id].DatiBeniServizi.DettaglioLinee[self.numero_linea].Quantita
+
+
 class LineHasAliquotaIvaSetTo(AbstractValueEqualToValidator):
 
     def __init__(self, body_id: int, numero_linea: int, expected_aliquota_iva: float):
@@ -321,7 +335,7 @@ class RegimeForfettarioMonthlyInvoiceValidator(MultiplexerValidator):
             HasA2EuroBollo(body_id=0),
             HasExactlyOneDettaglioLinea(body_id=0),
             LineDescriptionSpecifyMonthAndYear(body_id=0, numero_linea=0),
-            LineHasPrezzoUnitarioSetTo(body_id=0, numero_linea=0, expected_prezzo_unitario=1.0),
+            LineHasQuantitaSetTo(body_id=0, numero_linea=0, expected_quantita=1.0),
             LineHasAliquotaIvaSetTo(body_id=0, numero_linea=0, expected_aliquota_iva=0.0),
             LineHasNaturaSetTo(body_id=0, numero_linea=0, expected_natura=models.NaturaType.N_2_2),
             HasNoArrotondamento(body_id=0),

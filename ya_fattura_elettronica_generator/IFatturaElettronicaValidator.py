@@ -55,14 +55,23 @@ class IFatturaElettronicaValidator(abc.ABC):
         pass
 
     def print_validation_summary(self, outcome: List[ValidationOutcome]):
+        errors = 0
         print("ERRORS:")
         for i, x in enumerate(filter(lambda x: x.is_error, outcome)):
+            errors += 1
             print(f" {i:02d}. {x.message}")
         print("")
+        warnings = 0
         print("WARNINGS:")
         for i, x in enumerate(filter(lambda x: x.is_warning, outcome)):
+            warnings += 1
             print(f" {i:02d}. {x.message}")
         print("")
         print("SUCCESSES:")
         for i, x in enumerate(filter(lambda x: x.is_ok, outcome)):
             print(f" {i:02d}. {x.message}")
+
+        print(f"Validation has determined that fattura has {errors} errors and {warnings} warnings!")
+
+
+
